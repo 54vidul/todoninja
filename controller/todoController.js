@@ -35,6 +35,16 @@ module.exports = function (app){
       
 
   });
+    
+   app.get('/todo', function(req,res){
+      //GET DATA FROM MONGODB AND PASS IT TO THE VIEW
+      ToDo.find({}, function(err,data){
+          if(err) throw err;
+          res.render('todo', {todo: data});
+      });
+      
+
+  });
 
   app.post('/todo', urlEncodedParser, function(req,res){
       //GET DATA FROM THE VIEW AND ADD IT TO THE MONGODB
