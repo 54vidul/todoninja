@@ -26,7 +26,7 @@ var itemOne = ToDo({item: 'test item'}).save(function(error){
 
 module.exports = function (app){
 
-  app.get('/todo', function(req,res){
+  app.get('/', function(req,res){
       //GET DATA FROM MONGODB AND PASS IT TO THE VIEW
       ToDo.find({}, function(err,data){
           if(err) throw err;
