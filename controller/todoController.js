@@ -26,15 +26,15 @@ var itemOne = ToDo({item: 'test item'}).save(function(error){
 
 module.exports = function (app){
 
-  app.get('/', function(req,res){
-      //GET DATA FROM MONGODB AND PASS IT TO THE VIEW
-      ToDo.find({}, function(err,data){
-          if(err) throw err;
-          res.render('todo', {todo: data});
-      });
-      
-
-  });
+//  app.get('/', function(req,res){
+//      //GET DATA FROM MONGODB AND PASS IT TO THE VIEW
+//      ToDo.find({}, function(err,data){
+//          if(err) throw err;
+//          res.render('todo', {todo: data});
+//      });
+//      
+//
+//  });
     
    app.get('/todo', function(req,res){
       //GET DATA FROM MONGODB AND PASS IT TO THE VIEW
