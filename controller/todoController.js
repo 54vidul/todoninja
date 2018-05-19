@@ -15,10 +15,7 @@ var todoSchema = new mongoose.Schema({
 //CREATE A MODEL FOR THE SCHEMA
 var ToDo = mongoose.model('ToDo', todoSchema);
 
-var itemOne = ToDo({item: 'test item'}).save(function(error){
-    if(error) throw error;
-    console.log('item saved');
-});
+
 
 //TEMP DATA FOR MAKING THE LIST ON THE SERVER
 //var data = [{item: 'hello world 1'},{item: 'hello world 2'},{item: 'hello world 3'}];
