@@ -5,7 +5,7 @@ var urlEncodedParser = bodyParser.urlencoded({extended: false});
 var mongoose = require('mongoose');
 
 //CONNECT TO THE DATABASE
-mongoose.connect('mongodb://test:test@ds263089.mlab.com:63089/todo');
+mongoose.connect(process.env.MONGODB_URI);
 
 //CREATE A SCHEMA-- 
 var todoSchema = new mongoose.Schema({
